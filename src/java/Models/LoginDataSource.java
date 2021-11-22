@@ -16,11 +16,11 @@ public class LoginDataSource extends DriverManagerDataSource {
     public LoginDataSource(){
        // super("jdbc:sqlserver://localhost;databaseName=libraire","sa","sql"); **************  OJO 
        
-        super("jdbc:mysql://localhost:3306/librairie", "root", "root");
+//        super("jdbc:mysql://localhost:3306/librairie", "root", "root");
 //        super("jdbc:sqlserver://localhost:1433;databaseName=librairie", "user", "123");
-     // super("jdbc:sqlserver://localhost;databaseName=libraire","claudia","sql1");
-this.setDriverClassName("com.mysql.cj.jdbc.Driver");
-//this.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+      super("jdbc:sqlserver://localhost;databaseName=libraire","claudia","sql1");
+//this.setDriverClassName("com.mysql.cj.jdbc.Driver");
+this.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 
 }
 public LoginDataSource(String url,String username, String password, String className){
