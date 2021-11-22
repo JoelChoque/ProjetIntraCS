@@ -1,0 +1,11 @@
+
+package Utils;
+
+public class Constants {
+    public static final String MSG_NOT_DELETE="Can not delete because its in use";
+    
+    
+    
+    public static final String ROLE_USER="ROLE_USER";
+    public static final String ROLE_ADMIN="ROLE_ADMIN";
+}

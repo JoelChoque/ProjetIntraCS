@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xmlns:tx="http://www.springframework.org/schema/tx"
+xmlns:mvc="http://www.springframework.org/schema/mvc"
+xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+http://www.springframework.org/schema/aop 
+http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+http://www.springframework.org/schema/tx 
+http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+<mvc:resources mapping="/ressource/**" location="/WEB-INF/ressource/"/>
+
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/Views/"
+          p:suffix=".jsp" />
+
+    <!--
+    The index controller.
+    -->
+ <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+ <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>
+
+
+    
+<!-- la creation des beans pour controllers-->
+ <bean name="homeController" class="Controllers.HomeController"/>  
+ <bean name="adminController" class="Controllers.AdminController"/>
+ <bean name="achatController" class="Controllers.AchatController"/>   
+ <bean name="loginController" class="Controllers.LoginController"/>   
+ <bean name="studentController" class="Controllers.StudentController"/>   
+ <bean name="entityController" class="Controllers.EntityController"/>   
+ <bean name="activityController" class="Controllers.ActivityController"/>   
+ <bean name="cestaController" class="Controllers.CestaController"/>   
+</beans>
